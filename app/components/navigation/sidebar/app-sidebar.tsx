@@ -11,7 +11,8 @@ import {
   SidebarMenuItem,
   useSidebar,
   SidebarTrigger,
-  SidebarSeparator
+  SidebarSeparator,
+  SidebarMenuSubItem
 } from "../../ui/sidebar"
 
 import {useState} from "react";
@@ -25,8 +26,9 @@ import { Gift } from "lucide-react"
 import { Mail } from "lucide-react"
 import { Info } from "lucide-react"
 import { Settings } from "lucide-react"
-
-
+import ToggleButton from "./theme-toggle"
+import { Sun } from "lucide-react"
+import { Moon } from "lucide-react"
  
 const mainMenu = [
     {
@@ -72,19 +74,15 @@ const studyInformation = [
 import * as React from 'react';
 
 
-
-export default function StandaloneToggleButton() {
-  const [selected, setSelected] = React.useState(false);
-  const DarkMode = "Dark Mode";
-  const LightMode = "Light Mode";
-
-  return (
-    <BadgeWithIcon type="modern" color="brand" size="md" iconLeading={Sun}>Dark Mode</BadgeWithIcon>
-  );
-}
-
 export function AppSidebar() {
+
+    const [darkMode,setDarkMode] = useState(false);
+
+
   return (
+    
+
+
     <Sidebar collapsible="icon">
       <SidebarHeader />
       <SidebarContent>
@@ -133,7 +131,16 @@ export function AppSidebar() {
       <SidebarFooter>
         <SidebarGroup>  
                <SidebarMenu>
-                    <ThemeToggle />
+                    <SidebarMenuItem>
+                        
+                    
+                        <SidebarMenuButton variant="outline" onClick={() => setDarkMode(!darkMode)}>
+                            { darkMode ? <Sun /> : <Moon /> }
+                            <span>{darkMode ? "Light Mode" : "Dark Mode"}</span>
+                        
+                        </SidebarMenuButton>
+
+                    </SidebarMenuItem>
                     
                     <SidebarSeparator />
 
