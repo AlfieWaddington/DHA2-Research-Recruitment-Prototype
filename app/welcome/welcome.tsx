@@ -1,5 +1,6 @@
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
+import { Link } from "react-router";
 
 export function Welcome() {
   return (
@@ -35,9 +36,19 @@ export function Welcome() {
                   >
                     {icon}
                     {text}
+
+
                   </a>
                 </li>
               ))}
+
+              <li>
+                <a>
+                    <Link to="/ParticipantDashboard">View Dashboard</Link>
+                </a>
+
+              </li>
+
             </ul>
           </nav>
         </div>
