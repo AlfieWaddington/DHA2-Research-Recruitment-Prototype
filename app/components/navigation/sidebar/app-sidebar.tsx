@@ -15,7 +15,8 @@ import {
   SidebarMenuSubItem
 } from "../../ui/sidebar"
 
-import {useState} from "react";
+import {useState, useEffect } from "react";
+import {useDarkMode} from "usehooks-ts"
 
 
 import { Home } from "lucide-react"
@@ -77,7 +78,21 @@ import * as React from 'react';
 export function AppSidebar() {
 
     const [darkMode,setDarkMode] = useState(false);
+    const {isDarkMode, toggle, enable,disable } = useDarkMode();
+    
 
+    const darkModeHandler = ()=> {
+      setDarkMode(!darkMode);
+      
+      toggle();
+
+      const target = document.getElementsByClassName("darkModeDiv");
+      if (target){
+        
+        target[0].classList.toggle("dark");
+      }
+      
+    }
 
   return (
     
@@ -134,7 +149,7 @@ export function AppSidebar() {
                     <SidebarMenuItem>
                         
                     
-                        <SidebarMenuButton variant="outline" onClick={() => setDarkMode(!darkMode)}>
+                        <SidebarMenuButton variant="outline" onClick={() => darkModeHandler()}>
                             { darkMode ? <Sun /> : <Moon /> }
                             <span>{darkMode ? "Light Mode" : "Dark Mode"}</span>
                         

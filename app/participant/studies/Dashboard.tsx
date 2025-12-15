@@ -3,29 +3,32 @@ import { AppSidebar } from "../../components/navigation/sidebar/app-sidebar"
 import App from "~/root"
 
 
-
+import {useDarkMode} from "usehooks-ts"
 
 
 export default function Dashboard({ children }: {children:React.ReactNode}){
 
-
-
-
     return (
         <>
-            <SidebarProvider>
-                <AppSidebar />
-                <main>
-            
-                    {children}
-             
-
-
-                </main>
-
+            <div className="darkModeDiv">
+                <SidebarProvider>
+                    <AppSidebar />
+                    <main>
                 
+                        {children}
+                
+
+
+                    </main>
+
+                    
+            
+                </SidebarProvider>
+           </div>
+
         
-            </SidebarProvider>
+
+
         </>
     )
 
