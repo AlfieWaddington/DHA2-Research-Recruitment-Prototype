@@ -8,7 +8,7 @@ export function ProgressHeader(){
 
     return (
         <>
-            <div className="pl-5 pr-5 justify-start">
+            <div className="pl-5 pr-5 justify-start flex-1/12">
 
                 
                 <Card className="flex flex-col rounded-lg shadow bg-white dark:bg-gray-800" radius="lg">

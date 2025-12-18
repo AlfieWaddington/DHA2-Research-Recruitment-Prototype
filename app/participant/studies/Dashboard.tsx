@@ -2,6 +2,7 @@ import { SidebarProvider, SidebarTrigger } from "../../components/ui/sidebar"
 import { AppSidebar } from "../../components/navigation/sidebar/app-sidebar"
 import {ContentWrapper } from "./ContentWrapper"
 import {ProgressHeader} from "./ProgressHeader"
+import {Journey } from "./Journey"
 import App from "~/root"
 
 
@@ -22,10 +23,10 @@ export default function Dashboard({ children }: {children:React.ReactNode}){
                     <main  className="flex-4">
 
 
-
                         <ContentWrapper>
                             <ProgressHeader />
 
+                            <Journey />
 
 
                         </ContentWrapper>
