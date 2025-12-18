@@ -26,7 +26,8 @@ export default function Dashboard({ children }: {children:React.ReactNode}){
                         <ContentWrapper>
                             <ProgressHeader />
 
-                            <Journey />
+                        
+                          
 
 
                         </ContentWrapper>

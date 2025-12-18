@@ -10,7 +10,7 @@ export function ContentWrapper({ children }: {children:React.ReactNode}) {
 
     return (
         <>
-            <div className= "justify-center flex flex-col h-dvh" >
+            <div className="contentWrapper" >
 
                 {children}
 

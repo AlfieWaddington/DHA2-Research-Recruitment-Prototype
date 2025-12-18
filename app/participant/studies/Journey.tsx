@@ -1,36 +1,47 @@
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import {Chrono} from "react-chrono"
+import {useState} from "react"
+
+import { Check } from "lucide-react"
+
+
+ const render = [
+            {
+                title: "task1",
+                cardTitle: "task1 Title",
+                cardDetailedText: "Reward Earned"
+            },
+
+            {
+                title: "task2",
+                cardTitle: "task2 Title",
+                cardDetailedText: "Reward Available"
+            }
+
+    ];
+
 
 export function Journey(){
 
+    const [progress, incrementProgress] = useState(Array(4).fill(null));
+
+   
 
 
 
     return (
             <>
-                <div className="pl-1 pr-1 flex-11/12">
+                <div className="pl-1 pr-1">
 
                     
-                    <VerticalTimeline animate={false} lineColor="black">
-
-                        <VerticalTimelineElement className="vertical-timeline-element--work  bg-white dark:bg-gray-800 shadow rounded-lg" 
-                        >
-                        <h1> Test </h1>
+                    <Chrono mode="alternating" items={render}>
 
 
 
 
 
 
-                        </VerticalTimelineElement>
 
-
-
-
-
-
-                    </VerticalTimeline>
-
-
+                    </Chrono>
 
 
                 </div>

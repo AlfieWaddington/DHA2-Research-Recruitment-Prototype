@@ -1,3 +1,5 @@
+
+
 import {
   Sidebar,
   SidebarContent,
@@ -94,8 +96,12 @@ export function AppSidebar() {
       }
       */
 
+      
+      
       const target = document.body;
       target.classList.toggle("dark");
+      
+     
     }
 
   return (
