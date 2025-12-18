@@ -1,5 +1,7 @@
 import { SidebarProvider, SidebarTrigger } from "../../components/ui/sidebar"
 import { AppSidebar } from "../../components/navigation/sidebar/app-sidebar"
+import {ContentWrapper } from "./ContentWrapper"
+import {ProgressHeader} from "./ProgressHeader"
 import App from "~/root"
 
 
@@ -12,11 +14,23 @@ export default function Dashboard({ children }: {children:React.ReactNode}){
         <>
             <div className="darkModeDiv">
                 <SidebarProvider>
+
+                    <nav>
                     <AppSidebar />
-                    <main>
-                
-                        {children}
-                
+                    </nav>
+
+                    <main  className="flex-4">
+
+
+
+                        <ContentWrapper>
+                            <ProgressHeader />
+
+
+
+                        </ContentWrapper>
+
+
 
 
                     </main>
@@ -24,9 +38,8 @@ export default function Dashboard({ children }: {children:React.ReactNode}){
                     
             
                 </SidebarProvider>
+               
            </div>
-
-        
 
 
         </>

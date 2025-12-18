@@ -43,9 +43,9 @@ export function Welcome() {
               ))}
 
               <li>
-                <a>
+                
                     <Link to="/ParticipantDashboard">View Dashboard</Link>
-                </a>
+                
 
               </li>
 

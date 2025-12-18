@@ -86,12 +86,16 @@ export function AppSidebar() {
       
       toggle();
 
+        /*
       const target = document.getElementsByClassName("darkModeDiv");
       if (target){
         
         target[0].classList.toggle("dark");
       }
-      
+      */
+
+      const target = document.body;
+      target.classList.toggle("dark");
     }
 
   return (
@@ -101,6 +105,7 @@ export function AppSidebar() {
     <Sidebar collapsible="icon">
       <SidebarHeader />
       <SidebarContent>
+        
         <SidebarGroup>
              <SidebarGroupLabel>Main Menu</SidebarGroupLabel>
                 <SidebarGroupContent>
@@ -140,7 +145,7 @@ export function AppSidebar() {
         </SidebarGroup>
 
         
-
+      
       </SidebarContent>
 
       <SidebarFooter>
@@ -166,6 +171,7 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarFooter> 
     </Sidebar>
+                    
   )
 }
 
